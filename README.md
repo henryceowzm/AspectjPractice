@@ -1,0 +1,3 @@
+mvn clean install -DskipTests && mvn dependency:copy-dependencies && mv ./LTW/target/dependency/slf4j-log4j12-1.7.6.jar ./LTW/target/ && java -javaagent:./LTW/target/dependency/aspectjweaver-1.8.9.jar -cp .:./LTW/target/LTW-1.0-SNAPSHOT.jar:./LTW/target/dependency/* com.henry.App
+
+mvn clean install -DskipTests && java -javaagent:./LTW/target/LTW-1.0-SNAPSHOT-jar-with-dependencies.jar -jar ./LTW/target/LTW-1.0-SNAPSHOT-jar-with-dependencies.jar

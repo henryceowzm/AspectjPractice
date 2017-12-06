@@ -1,0 +1,11 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.henry.aspectj.LogDisabler"/>
+    </aspects>
+    <weaver options="-verbose -showWeaveInfo">
+        <include within="com.henry..*"></include>
+        <include within="org.jacorb.orb.giop.GIOPConnection"></include>
+        <exclude within="org.*"></exclude>
+    </weaver>
+</aspectj>
+
